@@ -23,6 +23,9 @@
 		898A77692912E31100D7A030 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898A77682912E31100D7A030 /* SettingsView.swift */; };
 		898A776C2912E32F00D7A030 /* VinCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898A776B2912E32F00D7A030 /* VinCheckView.swift */; };
 		898A776E2912E37400D7A030 /* Statics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898A776D2912E37400D7A030 /* Statics.swift */; };
+		898A77772913004F00D7A030 /* DataListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898A77762913004F00D7A030 /* DataListView.swift */; };
+		898A77792913018B00D7A030 /* SingleRatingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898A77782913018B00D7A030 /* SingleRatingDetailView.swift */; };
+		898A777C291301DC00D7A030 /* HeaderRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898A777B291301DC00D7A030 /* HeaderRatingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +46,9 @@
 		898A77682912E31100D7A030 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		898A776B2912E32F00D7A030 /* VinCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VinCheckView.swift; sourceTree = "<group>"; };
 		898A776D2912E37400D7A030 /* Statics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statics.swift; sourceTree = "<group>"; };
+		898A77762913004F00D7A030 /* DataListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataListView.swift; sourceTree = "<group>"; };
+		898A77782913018B00D7A030 /* SingleRatingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRatingDetailView.swift; sourceTree = "<group>"; };
+		898A777B291301DC00D7A030 /* HeaderRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderRatingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,7 +175,8 @@
 			children = (
 				898A77612912E2D800D7A030 /* RecentRatingsView.swift */,
 				898A77632912E2EA00D7A030 /* SingleRatingView.swift */,
-				898A77652912E2F700D7A030 /* StarViews.swift */,
+				898A77782913018B00D7A030 /* SingleRatingDetailView.swift */,
+				898A777A291301B900D7A030 /* Utils */,
 			);
 			path = RecentRatings;
 			sourceTree = "<group>";
@@ -237,6 +244,16 @@
 			children = (
 			);
 			path = CarList;
+			sourceTree = "<group>";
+		};
+		898A777A291301B900D7A030 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				898A77652912E2F700D7A030 /* StarViews.swift */,
+				898A77762913004F00D7A030 /* DataListView.swift */,
+				898A777B291301DC00D7A030 /* HeaderRatingView.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,8 +335,11 @@
 				898A775F2912E2B000D7A030 /* PhotoRecognitionView.swift in Sources */,
 				898A77642912E2EA00D7A030 /* SingleRatingView.swift in Sources */,
 				898A773E2912E10500D7A030 /* pracaInzynierskaApp.swift in Sources */,
+				898A77772913004F00D7A030 /* DataListView.swift in Sources */,
 				898A77562912E25900D7A030 /* CarDetailView.swift in Sources */,
 				898A77692912E31100D7A030 /* SettingsView.swift in Sources */,
+				898A777C291301DC00D7A030 /* HeaderRatingView.swift in Sources */,
+				898A77792913018B00D7A030 /* SingleRatingDetailView.swift in Sources */,
 				898A774F2912E1E800D7A030 /* Car.swift in Sources */,
 				898A776C2912E32F00D7A030 /* VinCheckView.swift in Sources */,
 				898A77592912E27C00D7A030 /* CarListView.swift in Sources */,

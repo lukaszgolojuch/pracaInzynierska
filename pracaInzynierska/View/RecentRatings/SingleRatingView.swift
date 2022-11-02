@@ -8,8 +8,38 @@
 import SwiftUI
 
 struct SingleRatingView: View {
+    let startView = StarViews()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            
+            HeaderRatingView()
+            
+            Divider()
+            
+            HStack{
+                VStack(alignment: .leading, spacing: 10){
+                    Section(header: Text("Description")) {
+                        Text("This is BMW series 5 description")
+                            .font(.custom(
+                            "Helvetica Neue",
+                            fixedSize: 20))
+                    }
+                }
+                
+                Spacer()
+            }
+            
+            HStack{
+                Spacer()
+                
+                NavigationLink {
+                    SingleRatingDetailView()
+                } label: {
+                    Text("Read more")
+                }
+            }.padding()
+        }.padding(20)
     }
 }
 

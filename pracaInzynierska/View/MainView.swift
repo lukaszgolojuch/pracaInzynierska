@@ -22,34 +22,33 @@ struct MainView: View {
                         }
                         .tag(1)
                     
-                    RecentRatingsView(ratings: ratings)
+                    SingleRatingView()
                         .tabItem{
                             Label("Recent Ratings", systemImage: "star.fill")
                         }
                         .tag(2)
                     
-                    PhotoRecognitionView()
-                        .tabItem{
-                            Label("Photo Recognition", systemImage: "camera.fill")
-                        }
-                        .tag(3)
-                    
                     GalleryView()
                         .tabItem{
                             Label("Gallery", systemImage: "photo.artframe")
                         }
-                        .tag(4)
+                        .tag(3)
                     
                     VinCheckView()
                         .tabItem{
                             Label("Check VIN", systemImage: "info.circle.fill")
                         }
-                        .tag(5)
+                        .tag(4)
                 }
                 .toolbar {
                     ToolbarItemGroup(placement: .navigationBarTrailing) {
                         NavigationLink(destination: SettingsView()) {
                             Image(systemName: "gear")
+                        }
+                    }
+                    ToolbarItemGroup(placement: .navigationBarLeading) {
+                        NavigationLink(destination: PhotoRecognitionView()) {
+                            Image(systemName: "camera")
                         }
                     }
                 }

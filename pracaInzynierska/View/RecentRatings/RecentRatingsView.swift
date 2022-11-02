@@ -21,6 +21,6 @@ struct RecentRatingsView: View {
 
 struct RecentRatingsView_Previews: PreviewProvider {
     static var previews: some View {
-        RecentRatingsView(ratings: [Rating(car: car, stars: 5, description: "This is car description")])
+        RecentRatingsView(ratings: [rating, rating, rating])
     }
 }
