@@ -10,6 +10,13 @@ import SwiftUI
 struct MainView: View {
     @State var selection = 1
     
+    init() {
+        UITabBar.appearance().barTintColor = UIColor(.blue)
+        UITabBar.appearance().backgroundColor = UIColor(.blue)
+        UITabBar.appearance().unselectedItemTintColor = UIColor(.black)
+    }
+
+    
     let ratings = [rating]
     var body: some View {
         
@@ -52,7 +59,36 @@ struct MainView: View {
                         }
                     }
                 }
+                .navigationBarTitleDisplayMode(.large)
+                .navigationBarTitle(navigationBarTitle(selected: $selection))
+                .accentColor(.white)
+                .onAppear {
+                    let appearance = UINavigationBarAppearance()
+                    appearance.backgroundEffect = UIBlurEffect(style: .systemUltraThinMaterial)
+                    appearance.backgroundColor = UIColor(.blue)
+                    appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+                    appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+
+                    // Inline appearance (standard height appearance)
+                    UINavigationBar.appearance().standardAppearance = appearance
+                    // Large Title appearance
+                    UINavigationBar.appearance().scrollEdgeAppearance = appearance
+                }
             }
+        }
+    }
+    
+    private func navigationBarTitle(selected: Binding<Int>) -> String {
+        
+        switch selected.wrappedValue {
+        case 1:
+            return("Cars List")
+        case 2:
+            return("Recent Ratings")
+        case 3:
+            return("Gallery")
+        default:
+            return("Check VIN")
         }
     }
 }
