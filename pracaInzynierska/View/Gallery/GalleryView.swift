@@ -9,7 +9,12 @@ import SwiftUI
 
 struct GalleryView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView{
+            ForEach(1...15, id: \.self) { i in
+                PhotoTileView()
+                Divider()
+            }
+        }
     }
 }
 

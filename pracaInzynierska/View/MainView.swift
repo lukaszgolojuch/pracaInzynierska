@@ -75,7 +75,7 @@ struct MainView: View {
                     UINavigationBar.appearance().scrollEdgeAppearance = appearance
                 }
             }
-        }
+        }.accentColor(.white)
     }
     
     private func navigationBarTitle(selected: Binding<Int>) -> String {
