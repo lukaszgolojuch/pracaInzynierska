@@ -29,7 +29,7 @@ struct MainView: View {
                         }
                         .tag(1)
                     
-                    SingleRatingView()
+                    RecentRatingsView(ratings: [rating, rating, rating])
                         .tabItem{
                             Label("Recent Ratings", systemImage: "star.fill")
                         }

@@ -26,7 +26,6 @@ struct SingleRatingView: View {
                             fixedSize: 20))
                     }
                 }
-                
                 Spacer()
             }
             

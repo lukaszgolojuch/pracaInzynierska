@@ -14,6 +14,10 @@ struct RecentRatingsView: View {
         ScrollView{
             ForEach(ratings) { rating in
                 SingleRatingView()
+                Divider()
+                    .frame(height: 1)
+                    .background(.blue)
+                    .padding()
             }
         }
     }

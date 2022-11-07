@@ -13,6 +13,9 @@ struct GalleryView: View {
             ForEach(1...15, id: \.self) { i in
                 PhotoTileView()
                 Divider()
+                    .frame(height: 1)
+                    .background(.blue)
+                    .padding()
             }
         }
     }

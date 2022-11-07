@@ -27,6 +27,12 @@ struct Manufacturer {
     var logo: String
 }
 
+struct FuelConsumption {
+    var city: Float
+    var highway: Float
+    var combined: Float
+}
+
 enum CarType {
     case Sedan
     case Hatchback
@@ -44,4 +50,5 @@ struct Car {
     var productionYears: ProductionYears
     var enginePower: EnginePower
     var priceNew: PriceNew
+    //var fuelConsuption: FuelConsumption
 }

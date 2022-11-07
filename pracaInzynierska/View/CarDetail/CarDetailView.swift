@@ -9,7 +9,18 @@ import SwiftUI
 
 struct CarDetailView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+
+        VStack(alignment: .leading) {
+                
+            CarDetailHeaderView()
+                    .padding(30)
+                
+            List {
+                CarDetailsSectionView()
+                FuelConsumtionSectionView()
+                RecentCarRatingsView(ratings: [rating,rating,rating])
+            }.background(Color.white)
+        }
     }
 }
 
