@@ -29,7 +29,13 @@ struct MainView: View {
                         }
                         .tag(1)
                     
-                    RecentRatingsView(ratings: [rating, rating, rating])
+//                    RecentRatingsView(ratings: [rating, rating, rating])
+//                        .tabItem{
+//                            Label("Recent Ratings", systemImage: "star.fill")
+//                        }
+//                        .tag(2)
+                    
+                    RecentRatingsView()
                         .tabItem{
                             Label("Recent Ratings", systemImage: "star.fill")
                         }

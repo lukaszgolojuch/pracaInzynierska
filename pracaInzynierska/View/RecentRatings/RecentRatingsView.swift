@@ -8,12 +8,29 @@
 import SwiftUI
 
 struct RecentRatingsView: View {
-    var ratings: [Rating]
+    
+    @ObservedObject var RecentRatingsVM = RecentRatingsViewModel()
+
+    init() {
+        RecentRatingsVM.fetchRatingData()
+    }
     
     var body: some View {
         ScrollView{
-            ForEach(ratings) { rating in
-                SingleRatingView()
+        
+            NavigationLink {
+                AddNewRatingView()
+            } label: {
+                Label("Add New Rating", image: "plus")
+            }.padding()
+            .background(.blue)
+            .foregroundColor(.white)
+            .clipShape(Capsule())
+            .padding(30)
+            
+            ForEach(RecentRatingsVM.ratings) { rating in
+//                SingleRatingView()
+                Text(rating.car)
                 Divider()
                     .frame(height: 1)
                     .background(.blue)
@@ -23,8 +40,8 @@ struct RecentRatingsView: View {
     }
 }
 
-struct RecentRatingsView_Previews: PreviewProvider {
-    static var previews: some View {
-        RecentRatingsView(ratings: [rating, rating, rating])
-    }
-}
+//struct RecentRatingsView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        RecentRatingsView(ratings: [rating, rating, rating])
+//    }
+//}
