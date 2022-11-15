@@ -9,18 +9,19 @@ import SwiftUI
 
 struct SingleRatingView: View {
     let startView = StarViews()
+    let rating: Rating
     
     var body: some View {
         VStack{
             
-            HeaderRatingView()
+            HeaderRatingView(rating: rating)
             
             Divider()
             
             HStack{
                 VStack(alignment: .leading, spacing: 10){
                     Section(header: Text("Description")) {
-                        Text("This is BMW series 5 description")
+                        Text(rating.description)
                             .font(.custom(
                             "Helvetica Neue",
                             fixedSize: 20))
@@ -33,7 +34,7 @@ struct SingleRatingView: View {
                 Spacer()
                 
                 NavigationLink {
-                    SingleRatingDetailView()
+                    SingleRatingDetailView(rating: rating)
                 } label: {
                     Text("Read more")
                 }
@@ -42,8 +43,8 @@ struct SingleRatingView: View {
     }
 }
 
-struct SingleRatingView_Previews: PreviewProvider {
-    static var previews: some View {
-        SingleRatingView()
-    }
-}
+//struct SingleRatingView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SingleRatingView()
+//    }
+//}

@@ -30,6 +30,8 @@ class RecentRatingsViewModel: ObservableObject {
                             print("[DEBUG] 6")
                             return Rating(id: d.documentID,
                                           car: d["car"] as? String ?? "",
+                                          make: d["make"] as? String ?? "",
+                                          model: d["model"] as? String ?? "",
                                           stars: d["stars"] as? Int ?? 0,
                                           description: d["description"] as? String ?? "",
                                           fuelConsumptionCity: d["fuelConsumptionCity"] as? Float ?? 0.0,

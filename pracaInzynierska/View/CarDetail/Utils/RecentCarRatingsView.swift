@@ -12,7 +12,7 @@ struct RecentCarRatingsView: View {
     
     var body: some View {
         ForEach(ratings) { rating in
-            SingleRatingView()
+            SingleRatingView(rating: rating)
             Divider()
                 .frame(height: 1)
                 .background(.blue)

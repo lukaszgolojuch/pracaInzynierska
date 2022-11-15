@@ -8,27 +8,29 @@
 import SwiftUI
 
 struct DataListView: View {
+    let rating: Rating
+    
     var body: some View {
         List {
             Section(header: Text("Description")) {
-                Text("This is BMW series 5 description")
+                Text(rating.description)
             }
             
             Section(header: Text("Fuel consuption")) {
                 HStack {
                     Text("City:")
                         .bold()
-                    Text("12l/100km")
+                    Text(String(rating.fuelConsumptionCity))
                 }
                 HStack {
                     Text("Highway:")
                         .bold()
-                    Text("12l/100km")
+                    Text(String(rating.fuelConsumptionHighway))
                 }
                 HStack {
                     Text("Combined:")
                         .bold()
-                    Text("12l/100km")
+                    Text(String(rating.fuelConsumtionCombined))
                 }
             }
             
@@ -36,30 +38,30 @@ struct DataListView: View {
                 HStack {
                     Text("Production year:")
                         .bold()
-                    Text("2019")
+                    Text(String(rating.productionYear))
                 }
                 HStack {
                     Text("Millage:")
                         .bold()
-                    Text("120000km")
+                    Text(String(rating.millage))
                 }
                 HStack {
                     Text("Transmission:")
                         .bold()
-                    Text("Automatic")
+                    Text(rating.transmission)
                 }
                 HStack {
-                        Text("Fuel type:")
+                    Text("Fuel type:")
                             .bold()
-                        Text("Diesel")
+                    Text(rating.fuelType)
                 }
             }
         }
     }
 }
 
-struct DataListView_Previews: PreviewProvider {
-    static var previews: some View {
-        DataListView()
-    }
-}
+//struct DataListView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        DataListView()
+//    }
+//}

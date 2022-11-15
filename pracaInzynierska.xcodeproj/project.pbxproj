@@ -314,9 +314,9 @@
 		898A777A291301B900D7A030 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				898A77652912E2F700D7A030 /* StarViews.swift */,
-				898A77762913004F00D7A030 /* DataListView.swift */,
 				898A777B291301DC00D7A030 /* HeaderRatingView.swift */,
+				898A77762913004F00D7A030 /* DataListView.swift */,
+				898A77652912E2F700D7A030 /* StarViews.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";

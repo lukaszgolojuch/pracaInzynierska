@@ -10,6 +10,8 @@ import Foundation
 struct Rating: Identifiable, Codable {
     var id: String
     var car: String
+    var make: String
+    var model: String
     var stars: Int
     var description: String
     var fuelConsumptionCity: Float

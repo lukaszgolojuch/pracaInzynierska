@@ -29,8 +29,7 @@ struct RecentRatingsView: View {
             .padding(30)
             
             ForEach(RecentRatingsVM.ratings) { rating in
-//                SingleRatingView()
-                Text(rating.car)
+                SingleRatingView(rating: rating)
                 Divider()
                     .frame(height: 1)
                     .background(.blue)
