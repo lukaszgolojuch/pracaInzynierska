@@ -23,6 +23,6 @@ struct RecentCarRatingsView: View {
 
 struct RecentCarRatingsView_Previews: PreviewProvider {
     static var previews: some View {
-        RecentCarRatingsView(ratings: [rating, rating, rating])
+        RecentCarRatingsView(ratings: [defaultRating, defaultRating, defaultRating])
     }
 }

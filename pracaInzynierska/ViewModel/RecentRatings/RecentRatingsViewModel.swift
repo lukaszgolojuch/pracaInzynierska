@@ -33,6 +33,7 @@ class RecentRatingsViewModel: ObservableObject {
                                           make: d["make"] as? String ?? "",
                                           model: d["model"] as? String ?? "",
                                           stars: d["stars"] as? Int ?? 0,
+                                          type: d["type"] as? String ?? "",
                                           description: d["description"] as? String ?? "",
                                           fuelConsumptionCity: d["fuelConsumptionCity"] as? Float ?? 0.0,
                                           fuelConsumptionHighway: d["fuelConsumptionHighway"] as? Float ?? 0.0,

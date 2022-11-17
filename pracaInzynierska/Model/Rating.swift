@@ -13,6 +13,7 @@ struct Rating: Identifiable, Codable {
     var make: String
     var model: String
     var stars: Int
+    var type: String
     var description: String
     var fuelConsumptionCity: Float
     var fuelConsumptionHighway: Float

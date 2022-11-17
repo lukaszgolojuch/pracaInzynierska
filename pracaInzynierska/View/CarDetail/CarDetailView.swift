@@ -18,7 +18,7 @@ struct CarDetailView: View {
             List {
                 CarDetailsSectionView()
                 FuelConsumtionSectionView()
-                RecentCarRatingsView(ratings: [rating,rating,rating])
+                RecentCarRatingsView(ratings: [defaultRating,defaultRating,defaultRating])
             }.background(Color.white)
         }
     }

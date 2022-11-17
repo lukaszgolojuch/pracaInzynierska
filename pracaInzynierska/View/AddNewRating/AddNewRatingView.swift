@@ -11,12 +11,23 @@ struct AddNewRatingView: View {
     
     @ObservedObject var addNewRatingVM = AddNewRatingViewModel()
 
-    init() {
-        addNewRatingVM.saveDataToFirestore()
-    }
-    
     var body: some View {
-        Text("jfodis")
+        Form {
+            GeneralSectionView()
+            StarsRatingSectionView()
+            CategorySelectionView()
+            DescriptionSelectionView()
+            FuelConsumptionSelectionView()
+                
+            Section {
+                Button(action: {
+                    addNewRatingVM.saveDataToFirestore()
+                }) {
+                    Text("Publish now")
+                        .foregroundColor(Color.blue)
+                }
+            }
+        }.navigationBarTitle("Add new rating")
     }
 }
 

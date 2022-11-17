@@ -49,6 +49,11 @@
 		89C2D7C8291424FC002053A0 /* PhotoFullScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C2D7C7291424FC002053A0 /* PhotoFullScreenView.swift */; };
 		89C2D7CA2915B0D0002053A0 /* BMWLogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 89C2D7C92915B0D0002053A0 /* BMWLogo.jpg */; };
 		89C2D7CC2915B3C8002053A0 /* CarDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C2D7CB2915B3C8002053A0 /* CarDetailHeaderView.swift */; };
+		89C470C5292425E000FC3791 /* GeneralSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C470C4292425E000FC3791 /* GeneralSectionView.swift */; };
+		89C470C72924264000FC3791 /* CategorySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C470C62924264000FC3791 /* CategorySelectionView.swift */; };
+		89C470C92924268C00FC3791 /* DescriptionSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C470C82924268C00FC3791 /* DescriptionSelectionView.swift */; };
+		89C470CB292426DB00FC3791 /* FuelConsumptionSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C470CA292426DB00FC3791 /* FuelConsumptionSelectionView.swift */; };
+		89C470CD292431FB00FC3791 /* StarsRatingSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C470CC292431FB00FC3791 /* StarsRatingSectionView.swift */; };
 		89E6CE4A2919AAEB005D878E /* AddNewRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E6CE492919AAEB005D878E /* AddNewRatingView.swift */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +89,11 @@
 		89C2D7C7291424FC002053A0 /* PhotoFullScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFullScreenView.swift; sourceTree = "<group>"; };
 		89C2D7C92915B0D0002053A0 /* BMWLogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BMWLogo.jpg; sourceTree = "<group>"; };
 		89C2D7CB2915B3C8002053A0 /* CarDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailHeaderView.swift; sourceTree = "<group>"; };
+		89C470C4292425E000FC3791 /* GeneralSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSectionView.swift; sourceTree = "<group>"; };
+		89C470C62924264000FC3791 /* CategorySelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelectionView.swift; sourceTree = "<group>"; };
+		89C470C82924268C00FC3791 /* DescriptionSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionSelectionView.swift; sourceTree = "<group>"; };
+		89C470CA292426DB00FC3791 /* FuelConsumptionSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelConsumptionSelectionView.swift; sourceTree = "<group>"; };
+		89C470CC292431FB00FC3791 /* StarsRatingSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsRatingSectionView.swift; sourceTree = "<group>"; };
 		89E6CE492919AAEB005D878E /* AddNewRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewRatingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -325,6 +335,7 @@
 			isa = PBXGroup;
 			children = (
 				89E6CE492919AAEB005D878E /* AddNewRatingView.swift */,
+				89C470C3292425BF00FC3791 /* FormSections */,
 			);
 			path = AddNewRating;
 			sourceTree = "<group>";
@@ -338,6 +349,18 @@
 				89A4F15929198286009A3EA8 /* RecentCarRatingsView.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		89C470C3292425BF00FC3791 /* FormSections */ = {
+			isa = PBXGroup;
+			children = (
+				89C470C4292425E000FC3791 /* GeneralSectionView.swift */,
+				89C470CC292431FB00FC3791 /* StarsRatingSectionView.swift */,
+				89C470C62924264000FC3791 /* CategorySelectionView.swift */,
+				89C470C82924268C00FC3791 /* DescriptionSelectionView.swift */,
+				89C470CA292426DB00FC3791 /* FuelConsumptionSelectionView.swift */,
+			);
+			path = FormSections;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -439,6 +462,7 @@
 				898A775C2912E29600D7A030 /* GalleryView.swift in Sources */,
 				898A77512912E20300D7A030 /* Rating.swift in Sources */,
 				89C2D7C8291424FC002053A0 /* PhotoFullScreenView.swift in Sources */,
+				89C470C5292425E000FC3791 /* GeneralSectionView.swift in Sources */,
 				89A4F15A29198286009A3EA8 /* RecentCarRatingsView.swift in Sources */,
 				898A77662912E2F700D7A030 /* StarViews.swift in Sources */,
 				898A77532912E22300D7A030 /* MainView.swift in Sources */,
@@ -452,10 +476,14 @@
 				898A777C291301DC00D7A030 /* HeaderRatingView.swift in Sources */,
 				898A77792913018B00D7A030 /* SingleRatingDetailView.swift in Sources */,
 				898A774F2912E1E800D7A030 /* Car.swift in Sources */,
+				89C470C92924268C00FC3791 /* DescriptionSelectionView.swift in Sources */,
 				89E6CE4A2919AAEB005D878E /* AddNewRatingView.swift in Sources */,
 				89C2D7CC2915B3C8002053A0 /* CarDetailHeaderView.swift in Sources */,
+				89C470C72924264000FC3791 /* CategorySelectionView.swift in Sources */,
+				89C470CB292426DB00FC3791 /* FuelConsumptionSelectionView.swift in Sources */,
 				898A776C2912E32F00D7A030 /* VinCheckView.swift in Sources */,
 				898A77592912E27C00D7A030 /* CarListView.swift in Sources */,
+				89C470CD292431FB00FC3791 /* StarsRatingSectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

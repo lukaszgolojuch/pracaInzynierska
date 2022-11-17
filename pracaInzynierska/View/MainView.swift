@@ -17,7 +17,7 @@ struct MainView: View {
     }
 
     
-    let ratings = [rating]
+    let ratings = [defaultRating]
     var body: some View {
         
         NavigationView {
@@ -28,13 +28,7 @@ struct MainView: View {
                             Label("Cars List", systemImage: "doc.plaintext.fill")
                         }
                         .tag(1)
-                    
-//                    RecentRatingsView(ratings: [rating, rating, rating])
-//                        .tabItem{
-//                            Label("Recent Ratings", systemImage: "star.fill")
-//                        }
-//                        .tag(2)
-                    
+          
                     RecentRatingsView()
                         .tabItem{
                             Label("Recent Ratings", systemImage: "star.fill")
