@@ -16,18 +16,12 @@ class RecentRatingsViewModel: ObservableObject {
     private let db = Firestore.firestore()
     
     func fetchRatingData() {
-        print("[DEBUG] 1")
         //Read the documents at a specific path
         db.collection("Ratings").getDocuments { snapshot, error in
-            print("[DEBUG] 2")
             if error == nil {
-                print("[DEBUG] 3")
                 if let snapshot = snapshot {
-                    print("[DEBUG] 4")
                     DispatchQueue.main.async {
-                        print("[DEBUG] 5")
                         self.ratings = snapshot.documents.map { d in
-                            print("[DEBUG] 6")
                             return Rating(id: d.documentID,
                                           car: d["car"] as? String ?? "",
                                           make: d["make"] as? String ?? "",
@@ -47,7 +41,7 @@ class RecentRatingsViewModel: ObservableObject {
                     }
                 }
             } else {
-                print("[DEBUG] 7")
+                print("[ERROR] Error Occured while fetching Recent Ratings Data from Firestore")
             }
         }
     }

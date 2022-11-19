@@ -8,6 +8,13 @@
 import SwiftUI
 
 struct CarListView: View {
+    
+    @ObservedObject var carListVM = CarListViewModel()
+    
+    init() {
+        carListVM.fetchCarData()
+    }
+    
     var body: some View {
         Text("fdsijf")
     }

@@ -9,6 +9,11 @@ import SwiftUI
 
 struct MainView: View {
     @State var selection = 1
+    @State var isPresenting: Bool = false
+    @State var moveToDetailView: Bool = false
+    @State var uiImage: UIImage?
+    @State var sourceType: UIImagePickerController.SourceType = .photoLibrary
+    @ObservedObject var classifier: ImageClassfier = ImageClassfier()
     
     init() {
         UITabBar.appearance().barTintColor = UIColor(.blue)
@@ -40,12 +45,6 @@ struct MainView: View {
                             Label("Gallery", systemImage: "photo.artframe")
                         }
                         .tag(3)
-                    
-                    VinCheckView()
-                        .tabItem{
-                            Label("Check VIN", systemImage: "info.circle.fill")
-                        }
-                        .tag(4)
                 }
                 .toolbar {
                     ToolbarItemGroup(placement: .navigationBarTrailing) {
@@ -54,7 +53,11 @@ struct MainView: View {
                         }
                     }
                     ToolbarItemGroup(placement: .navigationBarLeading) {
-                        NavigationLink(destination: PhotoRecognitionView()) {
+                        Button(action: {
+                            isPresenting = true
+                            sourceType = .camera
+
+                        }) {
                             Image(systemName: "camera")
                         }
                     }
@@ -74,6 +77,16 @@ struct MainView: View {
                     // Large Title appearance
                     UINavigationBar.appearance().scrollEdgeAppearance = appearance
                 }
+                .sheet(isPresented: $isPresenting){
+                    ImagePicker(uiImage: $uiImage, isPresenting:  $isPresenting, sourceType: $sourceType)
+                        .onDisappear{
+                            if uiImage != nil {
+                                classifier.detect(uiImage: uiImage!)
+                                print(classifier.imageClass)
+                                moveToDetailView = true
+                            }
+                        }
+                }
             }
         }.accentColor(.white)
     }
@@ -85,10 +98,8 @@ struct MainView: View {
             return("Cars List")
         case 2:
             return("Recent Ratings")
-        case 3:
-            return("Gallery")
         default:
-            return("Check VIN")
+            return("Gallery")
         }
     }
 }

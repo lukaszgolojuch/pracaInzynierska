@@ -21,7 +21,7 @@ struct PhotoTileView: View {
             
             Spacer()
             
-            VStack(alignment: .trailing, spacing: 10){
+            VStack(alignment: .leading, spacing: 10){
                 Text("BMW")
                     .font(.custom(
                             "Helvetica Neue",

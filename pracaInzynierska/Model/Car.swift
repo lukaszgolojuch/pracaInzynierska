@@ -7,48 +7,22 @@
 
 import UIKit
 
-struct ProductionYears {
-    var productionBegin: Int
-    var productionEnd: Int
-}
-
-struct EnginePower {
-    var minimumPower: Int
-    var maximumPower: Int
-}
-
-struct PriceNew {
-    var priceFrom: Int
-    var priceTo: Int
-}
-
-struct Manufacturer {
-    var name: String
-    var logo: String
-}
-
-struct FuelConsumption {
-    var city: Float
-    var highway: Float
-    var combined: Float
-}
-
-enum CarType {
-    case Sedan
-    case Hatchback
-    case Cabriolet
-    case Van
-    case Pickup
-    case Coupe
-    case StationWagon
-}
-
-struct Car {
-    var manufacturer: Manufacturer
+struct Car: Identifiable, Codable  {
+    var id: String
+    var make: String
     var model: String
-    var type: CarType
-    var productionYears: ProductionYears
-    var enginePower: EnginePower
-    var priceNew: PriceNew
-    //var fuelConsuption: FuelConsumption
+    var type: String
+    var description: String
+    var fuelConsumptionCityMin: Float
+    var fuelConsumptionCityMax: Float
+    var fuelConsumptionHighwayMin: Float
+    var fuelConsumptionHighwayMax: Float
+    var fuelConsumtionCombinedMin: Float
+    var fuelConsumtionCombinedMax: Float
+    var productionYearFrom: Int
+    var productionYearTo: Int
+    var enginePowerFrom: Int
+    var enginePowerTo: Int
+    var priceFrom: Float
+    var priceTo: Float
 }

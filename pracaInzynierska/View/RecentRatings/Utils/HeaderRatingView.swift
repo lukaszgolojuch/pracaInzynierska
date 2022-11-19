@@ -23,12 +23,11 @@ struct HeaderRatingView: View {
                     .font(.custom(
                             "Helvetica Neue",
                             fixedSize: 20))
-                
             }
             
             Spacer()
             
-            startView.numberOfStarsView(numberOfStars: 4).tint(.yellow)
+            startView.numberOfStarsView(numberOfStars: rating.stars).tint(.yellow)
             
         }
     }
