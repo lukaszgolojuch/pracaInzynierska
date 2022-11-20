@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct Car: Identifiable, Codable  {
+struct Car: Identifiable, Codable, Hashable  {
     var id: String
     var make: String
     var model: String

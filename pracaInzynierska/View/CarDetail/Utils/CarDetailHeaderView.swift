@@ -21,7 +21,7 @@ struct CarDetailHeaderView: View {
                             fixedSize: 20))
             }
             Spacer()
-            Image("BMWLogo")
+            Image("BMW")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .clipShape(Circle())

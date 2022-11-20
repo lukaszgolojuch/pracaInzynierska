@@ -21,11 +21,7 @@
 		892833F4291EA1EC00C823D0 /* FirebaseFunctionsCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 892833F3291EA1EC00C823D0 /* FirebaseFunctionsCombine-Community */; };
 		894D371B2928267C00F65B16 /* CarsImageClassfier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 894D371A2928267C00F65B16 /* CarsImageClassfier.mlmodel */; };
 		894D371F2928A0D000F65B16 /* CarlistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894D371E2928A0D000F65B16 /* CarlistViewModel.swift */; };
-		894D372229296A0F00F65B16 /* Porsche.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 894D372129296A0E00F65B16 /* Porsche.jpg */; };
-		894D372429296AE300F65B16 /* Cupra.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 894D372329296AE200F65B16 /* Cupra.jpg */; };
-		894D372629296B3800F65B16 /* Mercedes-Benz.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 894D372529296B3700F65B16 /* Mercedes-Benz.jpg */; };
-		894D372829296B6E00F65B16 /* Fiat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 894D372729296B6E00F65B16 /* Fiat.jpg */; };
-		894D372A29296B8F00F65B16 /* Jeep.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 894D372929296B8F00F65B16 /* Jeep.jpg */; };
+		894D372C292A2A3F00F65B16 /* HeaderStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894D372B292A2A3F00F65B16 /* HeaderStackView.swift */; };
 		895C19E5291EAB3500C09BAD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 895C19E4291EAB3500C09BAD /* GoogleService-Info.plist */; };
 		895C19EA291F091700C09BAD /* AddNewRatingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895C19E9291F091700C09BAD /* AddNewRatingViewModel.swift */; };
 		895C19EC291F593000C09BAD /* RecentRatingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895C19EB291F593000C09BAD /* RecentRatingsViewModel.swift */; };
@@ -56,7 +52,6 @@
 		89C2D7C329141F73002053A0 /* PhotoTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C2D7C229141F73002053A0 /* PhotoTileView.swift */; };
 		89C2D7C629142089002053A0 /* bmwg30.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 89C2D7C529142089002053A0 /* bmwg30.jpg */; };
 		89C2D7C8291424FC002053A0 /* PhotoFullScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C2D7C7291424FC002053A0 /* PhotoFullScreenView.swift */; };
-		89C2D7CA2915B0D0002053A0 /* BMW.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 89C2D7C92915B0D0002053A0 /* BMW.jpg */; };
 		89C2D7CC2915B3C8002053A0 /* CarDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C2D7CB2915B3C8002053A0 /* CarDetailHeaderView.swift */; };
 		89C470C5292425E000FC3791 /* GeneralSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C470C4292425E000FC3791 /* GeneralSectionView.swift */; };
 		89C470C72924264000FC3791 /* CategorySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C470C62924264000FC3791 /* CategorySelectionView.swift */; };
@@ -69,11 +64,7 @@
 /* Begin PBXFileReference section */
 		894D371A2928267C00F65B16 /* CarsImageClassfier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = CarsImageClassfier.mlmodel; sourceTree = "<group>"; };
 		894D371E2928A0D000F65B16 /* CarlistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarlistViewModel.swift; sourceTree = "<group>"; };
-		894D372129296A0E00F65B16 /* Porsche.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Porsche.jpg; sourceTree = "<group>"; };
-		894D372329296AE200F65B16 /* Cupra.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Cupra.jpg; sourceTree = "<group>"; };
-		894D372529296B3700F65B16 /* Mercedes-Benz.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Mercedes-Benz.jpg"; sourceTree = "<group>"; };
-		894D372729296B6E00F65B16 /* Fiat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Fiat.jpg; sourceTree = "<group>"; };
-		894D372929296B8F00F65B16 /* Jeep.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Jeep.jpg; sourceTree = "<group>"; };
+		894D372B292A2A3F00F65B16 /* HeaderStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderStackView.swift; sourceTree = "<group>"; };
 		895C19E4291EAB3500C09BAD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		895C19E9291F091700C09BAD /* AddNewRatingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewRatingViewModel.swift; sourceTree = "<group>"; };
 		895C19EB291F593000C09BAD /* RecentRatingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentRatingsViewModel.swift; sourceTree = "<group>"; };
@@ -105,7 +96,6 @@
 		89C2D7C229141F73002053A0 /* PhotoTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTileView.swift; sourceTree = "<group>"; };
 		89C2D7C529142089002053A0 /* bmwg30.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bmwg30.jpg; sourceTree = "<group>"; };
 		89C2D7C7291424FC002053A0 /* PhotoFullScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFullScreenView.swift; sourceTree = "<group>"; };
-		89C2D7C92915B0D0002053A0 /* BMW.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BMW.jpg; sourceTree = "<group>"; };
 		89C2D7CB2915B3C8002053A0 /* CarDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailHeaderView.swift; sourceTree = "<group>"; };
 		89C470C4292425E000FC3791 /* GeneralSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSectionView.swift; sourceTree = "<group>"; };
 		89C470C62924264000FC3791 /* CategorySelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelectionView.swift; sourceTree = "<group>"; };
@@ -138,17 +128,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		894D37202929680F00F65B16 /* LogoImages */ = {
+		894D372D292A2A5A00F65B16 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				89C2D7C92915B0D0002053A0 /* BMW.jpg */,
-				894D372529296B3700F65B16 /* Mercedes-Benz.jpg */,
-				894D372729296B6E00F65B16 /* Fiat.jpg */,
-				894D372929296B8F00F65B16 /* Jeep.jpg */,
-				894D372329296AE200F65B16 /* Cupra.jpg */,
-				894D372129296A0E00F65B16 /* Porsche.jpg */,
+				894D372B292A2A3F00F65B16 /* HeaderStackView.swift */,
 			);
-			path = LogoImages;
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		895C19E8291F08F700C09BAD /* AddNewRating */ = {
@@ -178,7 +163,6 @@
 		898A773C2912E10500D7A030 /* pracaInzynierska */ = {
 			isa = PBXGroup;
 			children = (
-				894D37202929680F00F65B16 /* LogoImages */,
 				898A776D2912E37400D7A030 /* Statics.swift */,
 				898A774B2912E12A00D7A030 /* Model */,
 				898A774C2912E12F00D7A030 /* View */,
@@ -253,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				898A77582912E27C00D7A030 /* CarListView.swift */,
+				894D372D292A2A5A00F65B16 /* Utils */,
 			);
 			path = CarList;
 			sourceTree = "<group>";
@@ -466,14 +451,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				898A77452912E10700D7A030 /* Preview Assets.xcassets in Resources */,
-				89C2D7CA2915B0D0002053A0 /* BMW.jpg in Resources */,
-				894D372829296B6E00F65B16 /* Fiat.jpg in Resources */,
 				895C19E5291EAB3500C09BAD /* GoogleService-Info.plist in Resources */,
-				894D372429296AE300F65B16 /* Cupra.jpg in Resources */,
-				894D372629296B3800F65B16 /* Mercedes-Benz.jpg in Resources */,
 				89C2D7C629142089002053A0 /* bmwg30.jpg in Resources */,
-				894D372A29296B8F00F65B16 /* Jeep.jpg in Resources */,
-				894D372229296A0F00F65B16 /* Porsche.jpg in Resources */,
 				898A77422912E10700D7A030 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -499,6 +478,7 @@
 				898A77512912E20300D7A030 /* Rating.swift in Sources */,
 				89C2D7C8291424FC002053A0 /* PhotoFullScreenView.swift in Sources */,
 				89C470C5292425E000FC3791 /* GeneralSectionView.swift in Sources */,
+				894D372C292A2A3F00F65B16 /* HeaderStackView.swift in Sources */,
 				89A4F15A29198286009A3EA8 /* RecentCarRatingsView.swift in Sources */,
 				89AEB9B12926C9FF00E028B6 /* ImageClassfier.swift in Sources */,
 				898A77662912E2F700D7A030 /* StarViews.swift in Sources */,

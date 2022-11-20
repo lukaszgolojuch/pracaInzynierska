@@ -36,8 +36,8 @@ class CarListViewModel: ObservableObject {
                                           productionYearTo: d["productionYearTo"] as? Int ?? 2022,
                                           enginePowerFrom: d["enginePowerFrom"] as? Int ?? 0,
                                           enginePowerTo: d["enginePowerTo"] as? Int ?? 0,
-                                       priceFrom: d["priceFrom"] as? Float ?? 0.0,
-                                       priceTo: d["priceTo"] as? Float ?? 0.0
+                                          priceFrom: d["priceFrom"] as? Float ?? 0.0,
+                                          priceTo: d["priceTo"] as? Float ?? 0.0
                             )
                         }
                     }
