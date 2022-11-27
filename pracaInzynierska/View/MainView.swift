@@ -40,7 +40,8 @@ struct MainView: View {
                         }
                         .tag(2)
                     
-                    GalleryView()
+                    //GalleryView()
+                    AddImageToGallery()
                         .tabItem{
                             Label("Gallery", systemImage: "photo.artframe")
                         }
@@ -55,7 +56,7 @@ struct MainView: View {
                     ToolbarItemGroup(placement: .navigationBarLeading) {
                         Button(action: {
                             isPresenting = true
-                            sourceType = .camera
+                            //sourceType = .camera
 
                         }) {
                             Image(systemName: "camera")
@@ -82,7 +83,7 @@ struct MainView: View {
                         .onDisappear{
                             if uiImage != nil {
                                 classifier.detect(uiImage: uiImage!)
-                                print(classifier.imageClass)
+                                print("[Debug][Image Classfier]" + (classifier.imageClass ?? "nil"))
                                 moveToDetailView = true
                             }
                         }
