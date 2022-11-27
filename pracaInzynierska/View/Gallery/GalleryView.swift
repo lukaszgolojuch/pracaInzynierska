@@ -17,8 +17,8 @@ struct GalleryView: View {
     
     var body: some View {
         ScrollView{
-            ForEach(1...15, id: \.self) { i in
-                PhotoTileView()
+            ForEach(galleryVM.imagesData, id: \.self) { imageData in
+                PhotoTileView(for: imageData.imageURL)
                 Divider()
                     .frame(height: 1)
                     .background(.blue)
@@ -26,6 +26,8 @@ struct GalleryView: View {
             }
         }
     }
+    
+    
 }
 
 struct GalleryView_Previews: PreviewProvider {
