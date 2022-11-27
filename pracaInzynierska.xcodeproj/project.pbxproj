@@ -13,7 +13,8 @@
 		895C19E5291EAB3500C09BAD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 895C19E4291EAB3500C09BAD /* GoogleService-Info.plist */; };
 		895C19EA291F091700C09BAD /* AddNewRatingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895C19E9291F091700C09BAD /* AddNewRatingViewModel.swift */; };
 		895C19EC291F593000C09BAD /* RecentRatingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895C19EB291F593000C09BAD /* RecentRatingsViewModel.swift */; };
-		8963165A2933A91B00CDB672 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896316592933A91B00CDB672 /* Image.swift */; };
+		8963165A2933A91B00CDB672 /* ImageStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896316592933A91B00CDB672 /* ImageStruct.swift */; };
+		8963165E2933CC1400CDB672 /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8963165D2933CC1400CDB672 /* GalleryViewModel.swift */; };
 		898A773E2912E10500D7A030 /* pracaInzynierskaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898A773D2912E10500D7A030 /* pracaInzynierskaApp.swift */; };
 		898A77422912E10700D7A030 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 898A77412912E10700D7A030 /* Assets.xcassets */; };
 		898A77452912E10700D7A030 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 898A77442912E10700D7A030 /* Preview Assets.xcassets */; };
@@ -73,7 +74,8 @@
 		895C19E4291EAB3500C09BAD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		895C19E9291F091700C09BAD /* AddNewRatingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewRatingViewModel.swift; sourceTree = "<group>"; };
 		895C19EB291F593000C09BAD /* RecentRatingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentRatingsViewModel.swift; sourceTree = "<group>"; };
-		896316592933A91B00CDB672 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		896316592933A91B00CDB672 /* ImageStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStruct.swift; sourceTree = "<group>"; };
+		8963165D2933CC1400CDB672 /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
 		898A773A2912E10500D7A030 /* pracaInzynierska.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pracaInzynierska.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		898A773D2912E10500D7A030 /* pracaInzynierskaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pracaInzynierskaApp.swift; sourceTree = "<group>"; };
 		898A77412912E10700D7A030 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -200,7 +202,7 @@
 			children = (
 				898A774E2912E1E800D7A030 /* Car.swift */,
 				898A77502912E20300D7A030 /* Rating.swift */,
-				896316592933A91B00CDB672 /* Image.swift */,
+				896316592933A91B00CDB672 /* ImageStruct.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -225,11 +227,8 @@
 			children = (
 				895C19E8291F08F700C09BAD /* AddNewRating */,
 				898A77752912E3F100D7A030 /* CarList */,
-				898A77742912E3EA00D7A030 /* CarDetail */,
 				898A77732912E3E400D7A030 /* Gallery */,
-				898A77722912E3DC00D7A030 /* PhotoRecognition */,
 				898A77712912E3D500D7A030 /* RecentRatings */,
-				898A77702912E3CF00D7A030 /* Settings */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -290,13 +289,6 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
-		898A77702912E3CF00D7A030 /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Settings;
-			sourceTree = "<group>";
-		};
 		898A77712912E3D500D7A030 /* RecentRatings */ = {
 			isa = PBXGroup;
 			children = (
@@ -305,25 +297,12 @@
 			path = RecentRatings;
 			sourceTree = "<group>";
 		};
-		898A77722912E3DC00D7A030 /* PhotoRecognition */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = PhotoRecognition;
-			sourceTree = "<group>";
-		};
 		898A77732912E3E400D7A030 /* Gallery */ = {
 			isa = PBXGroup;
 			children = (
+				8963165D2933CC1400CDB672 /* GalleryViewModel.swift */,
 			);
 			path = Gallery;
-			sourceTree = "<group>";
-		};
-		898A77742912E3EA00D7A030 /* CarDetail */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CarDetail;
 			sourceTree = "<group>";
 		};
 		898A77752912E3F100D7A030 /* CarList */ = {
@@ -492,7 +471,7 @@
 				898A775C2912E29600D7A030 /* GalleryView.swift in Sources */,
 				898A77512912E20300D7A030 /* Rating.swift in Sources */,
 				89C2D7C8291424FC002053A0 /* PhotoFullScreenView.swift in Sources */,
-				8963165A2933A91B00CDB672 /* Image.swift in Sources */,
+				8963165A2933A91B00CDB672 /* ImageStruct.swift in Sources */,
 				89C470C5292425E000FC3791 /* GeneralSectionView.swift in Sources */,
 				894D372C292A2A3F00F65B16 /* HeaderStackView.swift in Sources */,
 				89A4F15A29198286009A3EA8 /* RecentCarRatingsView.swift in Sources */,
@@ -513,6 +492,7 @@
 				89C30C89293375430065CA7D /* AddImageToGallery.swift in Sources */,
 				89E6CE4A2919AAEB005D878E /* AddNewRatingView.swift in Sources */,
 				89C2D7CC2915B3C8002053A0 /* CarDetailHeaderView.swift in Sources */,
+				8963165E2933CC1400CDB672 /* GalleryViewModel.swift in Sources */,
 				89C470C72924264000FC3791 /* CategorySelectionView.swift in Sources */,
 				89C470CB292426DB00FC3791 /* FuelConsumptionSelectionView.swift in Sources */,
 				898A77592912E27C00D7A030 /* CarListView.swift in Sources */,

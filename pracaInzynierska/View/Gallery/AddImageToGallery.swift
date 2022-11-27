@@ -16,6 +16,8 @@ struct AddImageToGallery: View {
     @State var sourceType: UIImagePickerController.SourceType = .photoLibrary
     @State var car: String = "BMW Series 5 2016"
     @State var date: Date = Date.now
+    
+    @State var fetchedData = [UIImage]()
 
     var body: some View {
         VStack {
@@ -37,6 +39,15 @@ struct AddImageToGallery: View {
                     uploadPhoto()
                 } label: {
                     Text("Upload photo")
+                }
+            }
+            
+            Divider()
+            HStack {
+                ForEach(fetchedData, id: \.self) { image in
+                    Image(uiImage: selectedImage!)
+                        .resizable()
+                        .frame(width: 200, height: 200)
                 }
             }
         }
@@ -76,10 +87,45 @@ struct AddImageToGallery: View {
                     "date": date,
                 ]
                 
-                db.collection("Images").document().setData(docData)
+                db.collection("Images").document().setData(docData, completion: { error in
+                    if error == nil {
+                        DispatchQueue.main.async {
+                            fetchImageData()
+                        }
+                    }
+                })
             }
         }
-        
+    }
+    
+    func fetchImageData() {
+        let db = Firestore.firestore()
+        db.collection("Images").getDocuments { snapshot, error in
+            
+            var paths = [String]()
+            
+            if error == nil && snapshot != nil {
+                for doc in snapshot!.documents {
+                    paths.append(doc["imageURL"] as! String)
+                }
+                
+                for path in paths {
+                    let storageRef = Storage.storage().reference()
+                    let fileRef = storageRef.child(path)
+                    
+                    fileRef.getData(maxSize: 5 * 1024 * 1024) { data, error in
+                        
+                        if error == nil && data != nil {
+                            if let image = UIImage(data: data!) {
+                                DispatchQueue.main.async {
+                                    fetchedData.append(image)
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 

@@ -8,6 +8,13 @@
 import SwiftUI
 
 struct GalleryView: View {
+    
+    @ObservedObject var galleryVM = GalleryViewModel()
+
+    init() {
+        galleryVM.fetchImagesData()
+    }
+    
     var body: some View {
         ScrollView{
             ForEach(1...15, id: \.self) { i in
