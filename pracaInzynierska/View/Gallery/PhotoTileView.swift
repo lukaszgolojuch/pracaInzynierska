@@ -11,40 +11,35 @@ import FirebaseStorage
 struct PhotoTileView: View {
     
     @State var image: UIImage = UIImage(systemName: "questionmark.folder")!
+    let colors = AppColors()
     
     init(for imageURL: String) {
         getUIImage(for: imageURL)
     }
     
     var body: some View {
-        HStack{
-            
-            NavigationLink(destination: PhotoFullScreenView()) {
-                //Image("bmwg30")
-                Image(uiImage: image)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 200.0, height: 200.0, alignment: .center)
-                    .clipped()
-            }
-            
-            Spacer()
-            
-            VStack(alignment: .leading, spacing: 10){
-                Text("BMW")
-                    .font(.custom(
-                            "Helvetica Neue",
-                            fixedSize: 25))
-                Text("Series 5")
-                    .font(.custom(
-                            "Helvetica Neue",
-                            fixedSize: 20))
-                Text("11.11.2022")
-                    .font(.custom(
-                            "Helvetica Neue",
-                            fixedSize: 15))
-            }
-        }.padding(20)
+        VStack{
+            HStack(alignment: .center){
+                NavigationLink(destination: PhotoFullScreenView()) {
+                    Image(uiImage: image)
+                        .resizable()
+                        .frame(width: 120, height: 100)
+                        .clipShape(RoundedRectangle(cornerRadius: 25.0, style: .continuous))
+                }
+                
+                Spacer()
+                VStack(alignment: .trailing, spacing: 7){
+                    Text("BMW Series 5 2016")
+                    Text("22.11.2022")
+                    //Text(String(Date.now))
+                    Spacer()
+                }.padding(.vertical)
+                
+            }.padding()
+        }.background(colors.lightGrey)
+            .clipShape(RoundedRectangle(cornerRadius: 25.0, style: .continuous))
+            .padding()
+            .frame(height: 160)
     }
     
     func getUIImage(for imageURL: String) {

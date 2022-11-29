@@ -8,34 +8,30 @@
 import SwiftUI
 
 struct CarDetailsSectionView: View {
+    let car: Car
+    
     var body: some View {
         Section(header: Text("Car details")) {
             HStack {
                 Text("Type:")
                     .bold()
-                Text("Sedan")
+                Text(car.type)
             }
             HStack {
                 Text("Production years:")
                     .bold()
-                Text("2009 - 2018")
+                Text(String(car.productionYearFrom) + "-" + String(car.productionYearTo))
             }
             HStack {
                 Text("Engine power:")
                     .bold()
-                Text("150 - 600 hp")
+                Text(String(car.enginePowerFrom) + "KM - " + String(car.enginePowerTo) + "KM")
             }
             HStack {
                 Text("Price (new):")
                     .bold()
-                Text("$25000 - $150000")
+                Text(String(car.priceFrom) + "PLN - " + String(car.priceTo) + "PLN")
             }
         }
-    }
-}
-
-struct CarDetailsSectionView_Previews: PreviewProvider {
-    static var previews: some View {
-        CarDetailsSectionView()
     }
 }

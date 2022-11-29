@@ -23,9 +23,3 @@ struct SingleRatingDetailView: View {
         }.padding(20)
     }
 }
-
-//struct SingleRatingDetailView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SingleRatingDetailView()
-//    }
-//}

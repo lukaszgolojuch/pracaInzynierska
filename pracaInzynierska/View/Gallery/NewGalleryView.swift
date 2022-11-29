@@ -1,20 +1,14 @@
 //
-//  GalleryView.swift
+//  NewGalleryView.swift
 //  pracaInzynierska
 //
-//  Created by Łukasz Gołojuch on 11/2/22.
+//  Created by Łukasz Gołojuch on 11/27/22.
 //
 
 import SwiftUI
 
-struct GalleryView: View {
-    
-    @ObservedObject var galleryVM = GalleryViewModel()
+struct NewGalleryView: View {
     let colors = AppColors()
-    
-    init() {
-        galleryVM.fetchImagesData()
-    }
     
     var body: some View {
     
@@ -36,7 +30,7 @@ struct GalleryView: View {
                         .aspectRatio(contentMode: .fill)
                         .clipShape(Circle())
                         .frame(maxWidth: 50.0, maxHeight: 50.0)
-                        .foregroundColor(colors.gold)
+                        .foregroundColor(colors.darkGrey)
 
                 }
             }.padding(20)
@@ -47,9 +41,29 @@ struct GalleryView: View {
                     .padding()
                     .foregroundColor(.white)
                 ScrollView{
-                    ForEach(galleryVM.imagesData, id: \.self) { imageData in
-                        PhotoTileView(for: imageData.imageURL)
-                    }
+                    VStack{
+                        HStack(alignment: .center){
+                            NavigationLink(destination: PhotoFullScreenView()) {
+                                Image("bmwg30")
+                                    .resizable()
+                                    .frame(width: 120, height: 100)
+                                    .clipShape(RoundedRectangle(cornerRadius: 25.0, style: .continuous))
+                            }
+                            
+                            Spacer()
+                            VStack(alignment: .trailing, spacing: 7){
+                                Text("BMW Series 5 2016")
+                                Text("22.11.2022")
+                                //Text(String(Date.now))
+                                Spacer()
+                            }.padding(.vertical)
+                            
+                        }.padding()
+                    }.background(colors.lightGrey)
+                        .clipShape(RoundedRectangle(cornerRadius: 25.0, style: .continuous))
+                        .padding()
+                        .frame(height: 160)
+                        
                 }
             }
             .frame(width: UIScreen.main.bounds.width, height: getStackOneHeight(), alignment: .top)
@@ -68,8 +82,8 @@ struct GalleryView: View {
     }
 }
 
-struct GalleryView_Previews: PreviewProvider {
+struct NewGalleryView_Previews: PreviewProvider {
     static var previews: some View {
-        GalleryView()
+        NewGalleryView()
     }
 }

@@ -8,24 +8,19 @@
 import SwiftUI
 
 struct CarDetailView: View {
+    let car: Car
     var body: some View {
 
         VStack(alignment: .leading) {
                 
-            CarDetailHeaderView()
+            CarDetailHeaderView(car: car)
                     .padding(30)
                 
             List {
-                CarDetailsSectionView()
-                FuelConsumtionSectionView()
+                CarDetailsSectionView(car: car)
+                FuelConsumtionSectionView(car: car)
                 RecentCarRatingsView(ratings: [defaultRating,defaultRating,defaultRating])
             }.background(Color.white)
         }
-    }
-}
-
-struct CarDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        CarDetailView()
     }
 }

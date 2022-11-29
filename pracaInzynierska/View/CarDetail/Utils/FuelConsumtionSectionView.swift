@@ -8,29 +8,42 @@
 import SwiftUI
 
 struct FuelConsumtionSectionView: View {
+    
+    let car: Car
+    
     var body: some View {
         Section(header: Text("Fuel consuption")) {
             HStack {
-                Text("City:")
+                Text("City (minimum):")
                     .bold()
-                Text("12l/100km")
+                Text(String(car.fuelConsumptionCityMin) + "l/100km")
             }
             HStack {
-                Text("Highway:")
+                Text("City (maximum):")
                     .bold()
-                Text("12l/100km")
+                Text(String(car.fuelConsumptionCityMax) + "l/100km")
             }
             HStack {
-                Text("Combined:")
+                Text("Highway (minimum):")
                     .bold()
-                Text("12l/100km")
+                Text(String(car.fuelConsumptionHighwayMin) + "l/100km")
             }
-        }
-    }
-}
+            HStack {
+                Text("Highway (maximum):")
+                    .bold()
+                Text(String(car.fuelConsumptionHighwayMax) + "l/100km")
+            }
+            HStack {
+                Text("Combined (minimum):")
+                    .bold()
+                Text(String(car.fuelConsumtionCombinedMin) + "l/100km")
+            }
+            HStack {
+                Text("Combined (maximum):")
+                    .bold()
+                Text(String(car.fuelConsumtionCombinedMax) + "l/100km")
+            }
 
-struct FuelConsumtionSectionView_Previews: PreviewProvider {
-    static var previews: some View {
-        FuelConsumtionSectionView()
+        }
     }
 }
