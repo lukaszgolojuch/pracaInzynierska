@@ -66,11 +66,11 @@ struct CarListView: View {
             VStack{
                 List {
                     CarDetailsSectionView(car: actualCar)
-                    FuelConsumtionSectionView(car: car)
+                    FuelConsumtionSectionView(car: actualCar)
                 }.listStyle(InsetGroupedListStyle())
             }
             .frame(width: UIScreen.main.bounds.width, height: getStackOneHeight(), alignment: .top)
-            //.background(colors.darkGrey)
+            .background(colors.darkGrey)
             .clipShape(RoundedRectangle(cornerRadius: 25.0, style: .continuous))
             .ignoresSafeArea(edges: .bottom)
         }

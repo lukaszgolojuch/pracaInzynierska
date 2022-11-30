@@ -62,7 +62,7 @@ struct FloatingTabbar : View {
                 }
             }.padding(.vertical,self.expand ? 20 : 8)
             .padding(.horizontal,self.expand ? 35 : 8)
-            .background(Color.white)
+            .background(self.expand == false ? colors.lightGrey : .white)
             .clipShape(Capsule())
             .padding(22)
             .onLongPressGesture {

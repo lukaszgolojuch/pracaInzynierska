@@ -19,16 +19,11 @@ class AddNewRatingViewModel: ObservableObject {
     }
     
     func addNewRecord(with ratingData: [String: Any]) {
-        do {
-            let _ = try db.collection("Ratings").addDocument(data: ratingData)
-        }
-        catch {
-            print(error)
-        }
+        let _ = db.collection("Ratings").addDocument(data: ratingData)
     }
     
     func saveDataToFirestore() {
-        var docData: [String: Any] = [
+        let docData: [String: Any] = [
             "car": newRating.car,
             "stars": newRating.stars,
             "description": newRating.description,

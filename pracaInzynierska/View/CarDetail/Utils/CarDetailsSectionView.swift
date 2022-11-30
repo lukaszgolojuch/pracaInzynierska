@@ -11,7 +11,8 @@ struct CarDetailsSectionView: View {
     let car: Car
     
     var body: some View {
-        Section(header: Text("Car details")) {
+        Section(header: Text("Car details")
+            .foregroundColor(.white)) {
             HStack {
                 Text("Type:")
                     .bold()
@@ -28,9 +29,14 @@ struct CarDetailsSectionView: View {
                 Text(String(car.enginePowerFrom) + "KM - " + String(car.enginePowerTo) + "KM")
             }
             HStack {
-                Text("Price (new):")
+                Text("Price from (new):")
                     .bold()
-                Text(String(car.priceFrom) + "PLN - " + String(car.priceTo) + "PLN")
+                Text(String(car.priceFrom) + "PLN")
+            }
+            HStack {
+                Text("Price to (new):")
+                    .bold()
+                Text(String(car.priceTo) + "PLN")
             }
         }
     }

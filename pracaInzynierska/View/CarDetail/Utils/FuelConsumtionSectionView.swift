@@ -12,7 +12,7 @@ struct FuelConsumtionSectionView: View {
     let car: Car
     
     var body: some View {
-        Section(header: Text("Fuel consuption")) {
+        Section(header: Text("Fuel consuption").foregroundColor(.white)) {
             HStack {
                 Text("City (minimum):")
                     .bold()
