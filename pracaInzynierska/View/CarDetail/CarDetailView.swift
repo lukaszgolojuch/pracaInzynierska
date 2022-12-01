@@ -14,12 +14,11 @@ struct CarDetailView: View {
         VStack(alignment: .leading) {
                 
             CarDetailHeaderView(car: car)
-                    .padding(30)
+                .padding(.horizontal, 20)
                 
             List {
                 CarDetailsSectionView(car: car)
                 FuelConsumtionSectionView(car: car)
-                RecentCarRatingsView(ratings: [defaultRating,defaultRating,defaultRating])
             }.background(Color.white)
         }
     }

@@ -20,27 +20,26 @@ struct AddImageToGallery: View {
     @State var fetchedData = [UIImage]()
 
     var body: some View {
-        VStack {
-            if selectedImage != nil {
-                Image(uiImage: selectedImage!)
-                    .resizable()
-                    .frame(width: 200, height: 200)
-            }
+        VStack(alignment: .leading) {
             
-            Button {
-                //show the image picker
-                isPickerShowing = true
-            } label: {
-                Text("Select a Photo")
-            }
-            
-            if selectedImage != nil {
+            List {
                 Button {
-                    uploadPhoto()
+                    //show the image picker
+                    isPickerShowing = true
                 } label: {
-                    Text("Upload photo")
+                    Text("Select a Photo")
                 }
+                
+                if selectedImage != nil {
+                    Button {
+                        uploadPhoto()
+                    } label: {
+                        Text("Upload photo")
+                    }
+                }
+
             }
+            
             
             Divider()
             HStack {

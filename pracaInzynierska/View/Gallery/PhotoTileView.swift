@@ -6,21 +6,30 @@
 //
 
 import SwiftUI
+import UIKit
 import FirebaseStorage
 
 struct PhotoTileView: View {
     
     @State var image: UIImage = UIImage(systemName: "questionmark.folder")!
+    var imageData: ImageStruct
+    var imageURL: String
     let colors = AppColors()
     
-    init(for imageURL: String) {
-        getUIImage(for: imageURL)
+    let dateFormatter = DateFormatter()
+    
+    init(for imageDateStruct: ImageStruct, with URL: String) {
+        imageURL = URL
+        imageData = imageDateStruct
+        getUIImage(for: URL)
+        dateFormatter.dateStyle = .long
+        dateFormatter.timeStyle = .none
     }
     
     var body: some View {
         VStack{
             HStack(alignment: .center){
-                NavigationLink(destination: PhotoFullScreenView()) {
+                NavigationLink(destination: PhotoFullScreenView(image: image)) {
                     Image(uiImage: image)
                         .resizable()
                         .frame(width: 120, height: 100)
@@ -29,9 +38,8 @@ struct PhotoTileView: View {
                 
                 Spacer()
                 VStack(alignment: .trailing, spacing: 7){
-                    Text("BMW Series 5 2016")
-                    Text("22.11.2022")
-                    //Text(String(Date.now))
+                    Text(imageData.car)
+                    Text(dateFormatter.string(from: imageData.date))
                     Spacer()
                 }.padding(.vertical)
                 
@@ -43,22 +51,20 @@ struct PhotoTileView: View {
     }
     
     func getUIImage(for imageURL: String) {
-            let storageRef = Storage.storage().reference()
-            let fileRef = storageRef.child(imageURL)
-            
-            fileRef.getData(maxSize: 5 * 1024 * 1024) { data, error in
-                
+            //let storageRef = Storage.storage().reference()
+            //let fileRef = storageRef.child(imageURL)
+        
+            let reference = Storage.storage().reference(withPath: imageURL)
+            reference.getData(maxSize: 5 * 1024 * 1024) { data, error in
+                print("[DEBUG] 1 get image")
             if error == nil && data != nil {
                 if let img = UIImage(data: data!) {
+                    print("[DEBUG] 2 get image")
+                    print(imageURL)
+                    //print(storageRef)
                     image = img
                 }
             }
         }
     }
 }
-
-//struct PhotoTileView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PhotoTileView()
-//    }
-//}

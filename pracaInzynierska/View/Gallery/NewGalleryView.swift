@@ -42,23 +42,23 @@ struct NewGalleryView: View {
                     .foregroundColor(.white)
                 ScrollView{
                     VStack{
-                        HStack(alignment: .center){
-                            NavigationLink(destination: PhotoFullScreenView()) {
-                                Image("bmwg30")
-                                    .resizable()
-                                    .frame(width: 120, height: 100)
-                                    .clipShape(RoundedRectangle(cornerRadius: 25.0, style: .continuous))
-                            }
-                            
-                            Spacer()
-                            VStack(alignment: .trailing, spacing: 7){
-                                Text("BMW Series 5 2016")
-                                Text("22.11.2022")
-                                //Text(String(Date.now))
-                                Spacer()
-                            }.padding(.vertical)
-                            
-                        }.padding()
+//                        HStack(alignment: .center){
+//                            NavigationLink(destination: PhotoFullScreenView(image: <#UIImage#>)) {
+//                                Image("bmwg30")
+//                                    .resizable()
+//                                    .frame(width: 120, height: 100)
+//                                    .clipShape(RoundedRectangle(cornerRadius: 25.0, style: .continuous))
+//                            }
+//                            
+//                            Spacer()
+//                            VStack(alignment: .trailing, spacing: 7){
+//                                Text("BMW Series 5 2016")
+//                                Text("22.11.2022")
+//                                //Text(String(Date.now))
+//                                Spacer()
+//                            }.padding(.vertical)
+//                            
+//                        }.padding()
                     }.background(colors.lightGrey)
                         .clipShape(RoundedRectangle(cornerRadius: 25.0, style: .continuous))
                         .padding()

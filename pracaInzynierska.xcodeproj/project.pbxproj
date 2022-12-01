@@ -36,7 +36,6 @@
 		898A777C291301DC00D7A030 /* HeaderRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898A777B291301DC00D7A030 /* HeaderRatingView.swift */; };
 		89A4F15529198060009A3EA8 /* FuelConsumtionSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A4F15429198060009A3EA8 /* FuelConsumtionSectionView.swift */; };
 		89A4F157291980E2009A3EA8 /* CarDetailsSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A4F156291980E2009A3EA8 /* CarDetailsSectionView.swift */; };
-		89A4F15A29198286009A3EA8 /* RecentCarRatingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A4F15929198286009A3EA8 /* RecentCarRatingsView.swift */; };
 		89AEB9AF2926C9B700E028B6 /* Classfier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AEB9AE2926C9B700E028B6 /* Classfier.swift */; };
 		89AEB9B12926C9FF00E028B6 /* ImageClassfier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AEB9B02926C9FF00E028B6 /* ImageClassfier.swift */; };
 		89AEB9B52926CF0E00E028B6 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AEB9B42926CF0E00E028B6 /* ImagePicker.swift */; };
@@ -99,7 +98,6 @@
 		898A777B291301DC00D7A030 /* HeaderRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderRatingView.swift; sourceTree = "<group>"; };
 		89A4F15429198060009A3EA8 /* FuelConsumtionSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelConsumtionSectionView.swift; sourceTree = "<group>"; };
 		89A4F156291980E2009A3EA8 /* CarDetailsSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailsSectionView.swift; sourceTree = "<group>"; };
-		89A4F15929198286009A3EA8 /* RecentCarRatingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCarRatingsView.swift; sourceTree = "<group>"; };
 		89AEB9AE2926C9B700E028B6 /* Classfier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classfier.swift; sourceTree = "<group>"; };
 		89AEB9B02926C9FF00E028B6 /* ImageClassfier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassfier.swift; sourceTree = "<group>"; };
 		89AEB9B42926CF0E00E028B6 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
@@ -343,7 +341,6 @@
 				89C2D7CB2915B3C8002053A0 /* CarDetailHeaderView.swift */,
 				89A4F156291980E2009A3EA8 /* CarDetailsSectionView.swift */,
 				89A4F15429198060009A3EA8 /* FuelConsumtionSectionView.swift */,
-				89A4F15929198286009A3EA8 /* RecentCarRatingsView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -470,7 +467,6 @@
 				8963165A2933A91B00CDB672 /* ImageStruct.swift in Sources */,
 				89C470C5292425E000FC3791 /* GeneralSectionView.swift in Sources */,
 				894D372C292A2A3F00F65B16 /* HeaderStackView.swift in Sources */,
-				89A4F15A29198286009A3EA8 /* RecentCarRatingsView.swift in Sources */,
 				89AEB9B12926C9FF00E028B6 /* ImageClassfier.swift in Sources */,
 				898A77662912E2F700D7A030 /* StarViews.swift in Sources */,
 				898A77532912E22300D7A030 /* MainView.swift in Sources */,

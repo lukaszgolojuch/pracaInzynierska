@@ -17,45 +17,46 @@ struct GalleryView: View {
     }
     
     var body: some View {
-    
-        VStack(alignment: .leading){
-            Spacer()
-            HStack{
-                VStack(alignment: .leading){
-                    Text("Title")
-                    Text("description")
-                }
-                
+        NavigationView{
+            VStack(alignment: .leading){
                 Spacer()
-                
-                NavigationLink {
-                    AddImageToGallery()
-                } label: {
-                    Image(systemName: "plus.circle")
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .clipShape(Circle())
-                        .frame(maxWidth: 50.0, maxHeight: 50.0)
-                        .foregroundColor(colors.gold)
+                HStack{
+                    VStack(alignment: .leading){
+                        Text("Gallery")
+                            .bold()
+                    }
+                    
+                    Spacer()
+                    
+                    NavigationLink {
+                        AddImageToGallery()
+                    } label: {
+                        Image(systemName: "plus.circle")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .clipShape(Circle())
+                            .frame(maxWidth: 50.0, maxHeight: 50.0)
+                            .foregroundColor(colors.gold)
 
-                }
-            }.padding(20)
-                .frame(width: UIScreen.main.bounds.width, height: getStackTwoHeight(), alignment: .center)
-                        
-            VStack{
-                Text("Images taken by users")
-                    .padding()
-                    .foregroundColor(.white)
-                ScrollView{
-                    ForEach(galleryVM.imagesData, id: \.self) { imageData in
-                        PhotoTileView(for: imageData.imageURL)
+                    }
+                }.padding(20)
+                    .frame(width: UIScreen.main.bounds.width, height: getStackTwoHeight(), alignment: .center)
+                            
+                VStack{
+                    Text("Images taken by users")
+                        .padding()
+                        .foregroundColor(.white)
+                    ScrollView{
+                        ForEach(galleryVM.imagesData, id: \.self) { imageData in
+                            PhotoTileView(for: imageData, with: imageData.imageURL)
+                        }
                     }
                 }
+                .frame(width: UIScreen.main.bounds.width, height: getStackOneHeight(), alignment: .top)
+                .background(colors.darkGrey)
+                .clipShape(RoundedRectangle(cornerRadius: 25.0, style: .continuous))
+                .ignoresSafeArea(edges: .bottom)
             }
-            .frame(width: UIScreen.main.bounds.width, height: getStackOneHeight(), alignment: .top)
-            .background(colors.darkGrey)
-            .clipShape(RoundedRectangle(cornerRadius: 25.0, style: .continuous))
-            .ignoresSafeArea(edges: .bottom)
         }
     }
     

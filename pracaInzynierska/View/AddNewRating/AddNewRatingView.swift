@@ -26,8 +26,8 @@ struct AddNewRatingView: View {
                     Text("Publish now")
                         .foregroundColor(Color.blue)
                 }
-            }
-        }.navigationBarTitle("Add new rating")
+            }.padding(.bottom, 30)
+        }
     }
 }
 

@@ -18,48 +18,50 @@ struct RecentRatingsView: View {
     }
         
     var body: some View {
-        VStack(alignment: .leading){
-            Spacer()
-            HStack{
-                VStack(alignment: .leading){
-                    Text("Title")
-                    Text("description")
-                }
-                
+        NavigationView {
+            VStack(alignment: .leading){
                 Spacer()
-                
-                NavigationLink {
-                    AddNewRatingView()
-                } label: {
-                    Image(systemName: "plus.circle")
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .clipShape(Circle())
-                        .frame(maxWidth: 50.0, maxHeight: 50.0)
-                        .foregroundColor(colors.gold)
+                HStack{
+                    VStack(alignment: .leading){
+                        Text("Revent Ratings")
+                            .bold()
+                    }
+                    
+                    Spacer()
+                    
+                    NavigationLink {
+                        AddNewRatingView()
+                    } label: {
+                        Image(systemName: "plus.circle")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .clipShape(Circle())
+                            .frame(maxWidth: 50.0, maxHeight: 50.0)
+                            .foregroundColor(colors.gold)
 
-                }
-            }.padding(20)
-                .frame(width: UIScreen.main.bounds.width, height: getStackTwoHeight(), alignment: .center)
-                        
-            VStack{
-                Text("Recent ratings")
-                    .padding()
-                    .foregroundColor(.white)
-                ScrollView{
-                    ForEach(RecentRatingsVM.ratings) { rating in
-                        SingleRatingView(rating: rating)
-                            .foregroundColor(.black)
-                        Divider()
-                            .frame(height: 1)
-                            .padding()
+                    }
+                }.padding(20)
+                    .frame(width: UIScreen.main.bounds.width, height: getStackTwoHeight(), alignment: .center)
+                            
+                VStack{
+                    Text("Recent ratings")
+                        .padding()
+                        .foregroundColor(.white)
+                    ScrollView{
+                        ForEach(RecentRatingsVM.ratings) { rating in
+                            SingleRatingView(rating: rating)
+                                .foregroundColor(.black)
+                            Divider()
+                                .frame(height: 1)
+                                .padding()
+                        }
                     }
                 }
+                .frame(width: UIScreen.main.bounds.width, height: getStackOneHeight(), alignment: .top)
+                .background(colors.darkGrey)
+                .clipShape(RoundedRectangle(cornerRadius: 25.0, style: .continuous))
+                .ignoresSafeArea(edges: .bottom)
             }
-            .frame(width: UIScreen.main.bounds.width, height: getStackOneHeight(), alignment: .top)
-            .background(colors.darkGrey)
-            .clipShape(RoundedRectangle(cornerRadius: 25.0, style: .continuous))
-            .ignoresSafeArea(edges: .bottom)
         }
     }
     
