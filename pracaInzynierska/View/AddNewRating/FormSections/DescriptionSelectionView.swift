@@ -12,7 +12,7 @@ struct DescriptionSelectionView: View {
     @ObservedObject var addNewRatingVM = AddNewRatingViewModel()
     
     var body: some View {
-        Section(header: Text("Description")) {
+        Section(header: Text("Description").foregroundColor(.white)) {
             TextEditor(text: $addNewRatingVM.newRating.description)
         }
     }

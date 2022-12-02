@@ -16,7 +16,6 @@
 		895C19EC291F593000C09BAD /* RecentRatingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895C19EB291F593000C09BAD /* RecentRatingsViewModel.swift */; };
 		8963165A2933A91B00CDB672 /* ImageStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896316592933A91B00CDB672 /* ImageStruct.swift */; };
 		8963165E2933CC1400CDB672 /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8963165D2933CC1400CDB672 /* GalleryViewModel.swift */; };
-		896316602933F30A00CDB672 /* NewGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8963165F2933F30A00CDB672 /* NewGalleryView.swift */; };
 		896316642933FCA500CDB672 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896316632933FCA500CDB672 /* AppColors.swift */; };
 		898A773E2912E10500D7A030 /* pracaInzynierskaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898A773D2912E10500D7A030 /* pracaInzynierskaApp.swift */; };
 		898A77422912E10700D7A030 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 898A77412912E10700D7A030 /* Assets.xcassets */; };
@@ -77,7 +76,6 @@
 		895C19EB291F593000C09BAD /* RecentRatingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentRatingsViewModel.swift; sourceTree = "<group>"; };
 		896316592933A91B00CDB672 /* ImageStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStruct.swift; sourceTree = "<group>"; };
 		8963165D2933CC1400CDB672 /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
-		8963165F2933F30A00CDB672 /* NewGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGalleryView.swift; sourceTree = "<group>"; };
 		896316632933FCA500CDB672 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		898A773A2912E10500D7A030 /* pracaInzynierska.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pracaInzynierska.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		898A773D2912E10500D7A030 /* pracaInzynierskaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pracaInzynierskaApp.swift; sourceTree = "<group>"; };
@@ -266,7 +264,6 @@
 				89C2D7C229141F73002053A0 /* PhotoTileView.swift */,
 				89C2D7C7291424FC002053A0 /* PhotoFullScreenView.swift */,
 				89C30C88293375430065CA7D /* AddImageToGallery.swift */,
-				8963165F2933F30A00CDB672 /* NewGalleryView.swift */,
 			);
 			path = Gallery;
 			sourceTree = "<group>";
@@ -488,7 +485,6 @@
 				898A77592912E27C00D7A030 /* CarListView.swift in Sources */,
 				8912827029369658000EFF06 /* FloatingTabBar.swift in Sources */,
 				89C470CD292431FB00FC3791 /* StarsRatingSectionView.swift in Sources */,
-				896316602933F30A00CDB672 /* NewGalleryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

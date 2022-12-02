@@ -10,6 +10,7 @@ import SwiftUI
 struct HeaderStackView: View {
     
     var carObject: Car
+    let colors = AppColors()
     static let screenWidth = UIScreen.main.bounds.size.width
     static let screenHeight = UIScreen.main.bounds.size.height
     
@@ -31,11 +32,11 @@ struct HeaderStackView: View {
             }
         }.padding(20)
         .frame(width: UIScreen.main.bounds.width - 40, height: 150, alignment: .center)
-            .background(Color(red: 255/255, green: 252/255, blue: 243/255,opacity: 0.9))
+        .background(colors.lightGrey)
             .clipShape(RoundedRectangle(cornerRadius: 25.0, style: .continuous))
             .overlay(RoundedRectangle(cornerRadius: 25.0, style: .continuous)
                 .stroke(.black, lineWidth: 2))
-            .shadow(radius: 5.0)
+            .shadow(color: colors.gold, radius: 1.0)
             
     }
 }

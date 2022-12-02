@@ -48,7 +48,7 @@ struct GalleryView: View {
                         .foregroundColor(.white)
                     ScrollView{
                         ForEach(galleryVM.imagesData, id: \.self) { imageData in
-                            PhotoTileView(for: imageData, with: imageData.imageURL)
+                            PhotoTileView(for: imageData)
                         }
                     }
                 }

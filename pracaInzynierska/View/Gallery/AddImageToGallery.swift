@@ -17,43 +17,79 @@ struct AddImageToGallery: View {
     @State var car: String = "BMW Series 5 2016"
     @State var date: Date = Date.now
     
+    let colors = AppColors()
+    
+    enum CarModels: String, CaseIterable {
+        case BmwSeries52016 = "BMW Series 5 2016"
+        case CupraFormentor2021 = "Cupra Formentor 2021"
+        case Fiat5002007 = "Fiat 500 2007"
+        case MercedesBenzGClass2018 = "Mercedes-Benz G Class 2018"
+        case PorscheCayenne2019 = "Porsche Cayenne 2019"
+        case JeepWrangler2017 = "Jeep Wrangler 2017"
+        case Porsche9112019 = "Porsche 911 2019"
+        var id: String { return self.rawValue }
+    }
+    
     @State var fetchedData = [UIImage]()
 
     var body: some View {
-        VStack(alignment: .leading) {
-            
-            List {
-                Button {
-                    //show the image picker
-                    isPickerShowing = true
-                } label: {
-                    Text("Select a Photo")
+        VStack(alignment: .leading){
+            Spacer()
+            HStack{
+                VStack(alignment: .center){
+                    Text("Add new image")
+                        .bold()
                 }
-                
-                if selectedImage != nil {
-                    Button {
-                        uploadPhoto()
-                    } label: {
-                        Text("Upload photo")
+            }.padding(20)
+                .frame(width: UIScreen.main.bounds.width, height: getStackTwoHeight(), alignment: .center)
+                        
+            VStack{
+                List {
+                    Section{
+                        Picker(selection: $car, label: Text("Car model: ")) {
+                            ForEach(CarModels.allCases, id: \.id) { item in
+                                        Text(item.rawValue)
+                            }
+                        }
+                        
+                        Button {
+                            isPickerShowing = true
+                        } label: {
+                            Text("Select a Photo")
+                        }
+                    }
+                    
+                    if selectedImage != nil {
+                        Section {
+                            Button {
+                                uploadPhoto()
+                            } label: {
+                                HStack{
+                                    Spacer()
+                                    Text("Upload photo")
+                                        .foregroundColor(.blue)
+                                }
+                            }
+                        }
                     }
                 }
-
             }
-            
-            
-            Divider()
-            HStack {
-                ForEach(fetchedData, id: \.self) { image in
-                    Image(uiImage: selectedImage!)
-                        .resizable()
-                        .frame(width: 200, height: 200)
-                }
+            .frame(width: UIScreen.main.bounds.width, height: getStackOneHeight(), alignment: .top)
+            .background(colors.darkGrey)
+            .clipShape(RoundedRectangle(cornerRadius: 25.0, style: .continuous))
+            .ignoresSafeArea(edges: .bottom)
+            .sheet(isPresented: $isPickerShowing){
+                ImagePicker(uiImage: $selectedImage, isPresenting:  $isPickerShowing, sourceType: $sourceType)
             }
         }
-        .foregroundColor(.black)
-        .sheet(isPresented: $isPickerShowing){
-            ImagePicker(uiImage: $selectedImage, isPresenting:  $isPickerShowing, sourceType: $sourceType)
-        }
+    }
+    
+    func getStackOneHeight() -> CGFloat {
+        return (UIScreen.main.bounds.height * 0.80)
+    }
+    
+    func getStackTwoHeight() -> CGFloat {
+        return (UIScreen.main.bounds.height * 0.20)
     }
     
     func uploadPhoto() {

@@ -12,11 +12,11 @@ struct DataListView: View {
     
     var body: some View {
         List {
-            Section(header: Text("Description")) {
+            Section(header: Text("Description").foregroundColor(.white)) {
                 Text(rating.description)
             }
             
-            Section(header: Text("Fuel consuption")) {
+            Section(header: Text("Fuel consuption").foregroundColor(.white)) {
                 HStack {
                     Text("City:")
                         .bold()
@@ -34,7 +34,7 @@ struct DataListView: View {
                 }
             }
             
-            Section(header: Text("Car data")) {
+            Section(header: Text("Car data").foregroundColor(.white)) {
                 HStack {
                     Text("Production year:")
                         .bold()
@@ -59,9 +59,3 @@ struct DataListView: View {
         }
     }
 }
-
-//struct DataListView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        DataListView()
-//    }
-//}

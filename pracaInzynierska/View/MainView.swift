@@ -29,6 +29,7 @@ struct MainView: View {
                 }
                 else if self.selected == 1 {
                     GeometryReader{_ in
+                        
                         RecentRatingsView()
                     }
                 }

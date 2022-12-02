@@ -23,7 +23,7 @@ struct FuelConsumptionSelectionView: View {
     }
     
     var body: some View {
-        Section(header: Text("Fuel Consumption")) {
+        Section(header: Text("Fuel Consumption").foregroundColor(.white)) {
 
             Picker(selection: $addNewRatingVM.newRating.transmission, label: Text("Fuel type: ")) {
                 ForEach(FuelType.allCases, id: \.id) { item in
