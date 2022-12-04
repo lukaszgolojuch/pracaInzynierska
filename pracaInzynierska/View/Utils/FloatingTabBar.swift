@@ -11,6 +11,7 @@ struct FloatingTabbar : View {
      
     @Binding var selected : Int
     @Binding var isPresenting : Bool
+    @Binding var moveToDetailView : Bool
     @State var expand = false
     let colors = AppColors()
      
@@ -34,6 +35,7 @@ struct FloatingTabbar : View {
                         self.selected = 0
                         self.isPresenting = false
                         self.expand = false
+                        self.moveToDetailView = false
                     }) {
                         Image(systemName: "doc.plaintext.fill").foregroundColor(self.selected == 0 ? colors.gold : .gray).padding(.horizontal)
                     }
@@ -44,6 +46,7 @@ struct FloatingTabbar : View {
                         self.isPresenting = false
                         self.selected = 1
                         self.expand = false
+                        self.moveToDetailView = false
                     }) {
                         Image(systemName: "star.fill").foregroundColor(self.selected == 1 ? colors.gold : .gray).padding(.horizontal)
                     }
@@ -54,6 +57,7 @@ struct FloatingTabbar : View {
                         self.isPresenting = false
                         self.selected = 2
                         self.expand = false
+                        self.moveToDetailView = false
                     }) {
                         Image(systemName: "photo.artframe").foregroundColor(self.selected == 2 ? colors.gold : .gray).padding(.horizontal)
                     }
@@ -61,11 +65,22 @@ struct FloatingTabbar : View {
                     Spacer(minLength: 15)
                     
                     Button(action: {
-                        self.isPresenting = false
-                        self.isPresenting = true
                         self.expand = false
+                        self.selected = 4
+                        self.isPresenting = true
                     }) {
                         Image(systemName: "camera").foregroundColor(self.selected == 3 ? colors.gold : .gray).padding(.horizontal)
+                    }
+                    
+                    if(self.moveToDetailView)
+                    {
+                        Spacer(minLength: 15)
+                        
+                        Button(action: {
+                            self.expand = false
+                        }) {
+                            Image(systemName: "newspaper.fill").foregroundColor(self.selected == 4 ? colors.gold : .gray).padding(.horizontal)
+                        }
                     }
                 }
             }.padding(.vertical,self.expand ? 20 : 8)

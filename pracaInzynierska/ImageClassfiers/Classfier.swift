@@ -15,20 +15,22 @@ struct Classifier {
     
     mutating func detect(ciImage: CIImage) {
         
-        guard let model = try? VNCoreMLModel(for: CarsImageClassfier(configuration: MLModelConfiguration()).model) else {
+        guard let model = try? VNCoreMLModel(for: CarsImageClassfier(configuration: MLModelConfiguration()).model)
+        else {
             return
         }
         
         let request = VNCoreMLRequest(model: model)
         let handler = VNImageRequestHandler(ciImage: ciImage, options: [:])
         try? handler.perform([request])
-
+        
         guard let results = request.results as? [VNClassificationObservation] else {
             return
         }
-
+        
         if let firstResult = results.first {
             self.results = firstResult.identifier
+            print(firstResult.identifier)
         }
     }
 }

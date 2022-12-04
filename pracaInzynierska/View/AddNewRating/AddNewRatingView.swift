@@ -41,7 +41,7 @@ struct AddNewRatingView: View {
                                 .foregroundColor(Color.blue)
                         }
                     }
-                }
+                }.padding(.bottom, 60)
             }
             .frame(width: UIScreen.main.bounds.width, height: getStackOneHeight(), alignment: .top)
             .background(colors.darkGrey)

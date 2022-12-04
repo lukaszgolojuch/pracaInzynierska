@@ -31,14 +31,24 @@ struct FuelConsumptionSelectionView: View {
                 }
             }
             
-            TextField("City", value: $addNewRatingVM.newRating.fuelConsumptionCity, formatter: decimalFormatter)
-                    .keyboardType(.decimalPad)
+            HStack{
+                Text("Fuel Consumption (city): ")
+                TextField("City", value: $addNewRatingVM.newRating.fuelConsumptionCity, formatter: decimalFormatter)
+                        .keyboardType(.decimalPad)
+            }
             
-            TextField("Highway", value: $addNewRatingVM.newRating.fuelConsumptionHighway, formatter: decimalFormatter)
-                    .keyboardType(.decimalPad)
+            HStack{
+                Text("Fuel Consumption (highway): ")
+                TextField("Highway", value: $addNewRatingVM.newRating.fuelConsumptionHighway, formatter: decimalFormatter)
+                        .keyboardType(.decimalPad)
+            }
             
-            TextField("Combined", value: $addNewRatingVM.newRating.fuelConsumtionCombined, formatter: decimalFormatter)
-                    .keyboardType(.decimalPad)
+            HStack{
+                Text("Fuel Consumption (combined): ")
+                TextField("Combined", value: $addNewRatingVM.newRating.fuelConsumtionCombined, formatter: decimalFormatter)
+                        .keyboardType(.decimalPad)
+            }
+            
         }
     }
 }

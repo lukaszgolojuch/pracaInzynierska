@@ -39,7 +39,7 @@ struct CarListView: View {
                             }
                         }
                         .onChange(of: scrollViewContentOffset, perform: { value in
-                                var z = scrollViewContentOffset/CarListView.screenWidth
+                                var z = scrollViewContentOffset/CarListView.screenWidth * 1.1
                                 z.round(.down)
                                 screenNumber = z
                                 print(actualCar.make)
@@ -67,7 +67,6 @@ struct CarListView: View {
                 VStack{
                     List {
                         CarDetailsSectionView(car: actualCar)
-                        
                         NavigationLink {
                             CarDetailView(car: carToDetail)
                         } label: {

@@ -61,12 +61,28 @@ struct GeneralSectionView: View {
                 addNewRatingVM.newRating.model = (CarEnum(rawValue: car)?.info.carModel)!
                 }
 
-            TextField("Make", text: $addNewRatingVM.newRating.make)
-            TextField("Model", text: $addNewRatingVM.newRating.model)
-            TextField("Production year", value: $addNewRatingVM.newRating.productionYear, formatter: NumberFormatter())
-                .keyboardType(.decimalPad)
-            TextField("Millage", value: $addNewRatingVM.newRating.millage, formatter: NumberFormatter())
-                .keyboardType(.decimalPad)
+            HStack{
+                Text("Make: ")
+                TextField("Make", text: $addNewRatingVM.newRating.make)
+            }
+            
+            HStack{
+                Text("Model: ")
+                TextField("Model", text: $addNewRatingVM.newRating.model)
+            }
+            
+            HStack{
+                Text("Production year: ")
+                TextField("Production year", value: $addNewRatingVM.newRating.productionYear, formatter: NumberFormatter())
+                    .keyboardType(.decimalPad)
+            }
+            
+            HStack{
+                Text("Actual millage: ")
+                TextField("Millage", value: $addNewRatingVM.newRating.millage, formatter: NumberFormatter())
+                    .keyboardType(.decimalPad)
+            }
+            
             Picker(selection: $addNewRatingVM.newRating.transmission, label: Text("Transmission: ")) {
                 ForEach(TransmissionType.allCases, id: \.id) { item in
                         Text(item.rawValue)

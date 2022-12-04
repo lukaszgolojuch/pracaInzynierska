@@ -16,32 +16,32 @@ struct FuelConsumtionSectionView: View {
             HStack {
                 Text("City (minimum):")
                     .bold()
-                Text(String(car.fuelConsumptionCityMin) + "l/100km")
+                Text(String(format: "%.1f", car.fuelConsumptionCityMin) + "l/100km")
             }
             HStack {
                 Text("City (maximum):")
                     .bold()
-                Text(String(car.fuelConsumptionCityMax) + "l/100km")
+                Text(String(format: "%.1f", car.fuelConsumptionCityMax) + "l/100km")
             }
             HStack {
                 Text("Highway (minimum):")
                     .bold()
-                Text(String(car.fuelConsumptionHighwayMin) + "l/100km")
+                Text(String(format: "%.1f", car.fuelConsumptionHighwayMin) + "l/100km")
             }
             HStack {
                 Text("Highway (maximum):")
                     .bold()
-                Text(String(car.fuelConsumptionHighwayMax) + "l/100km")
+                Text(String(format: "%.1f", car.fuelConsumptionHighwayMax) + "l/100km")
             }
             HStack {
                 Text("Combined (minimum):")
                     .bold()
-                Text(String(car.fuelConsumtionCombinedMin) + "l/100km")
+                Text(String(format: "%.1f", car.fuelConsumptionCombinedMin) + "l/100km")
             }
             HStack {
                 Text("Combined (maximum):")
                     .bold()
-                Text(String(car.fuelConsumtionCombinedMax) + "l/100km")
+                Text(String(format: "%.1f", car.fuelConsumptionCombinedMax) + "l/100km")
             }
 
         }

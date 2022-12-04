@@ -17,8 +17,8 @@ struct Car: Identifiable, Codable, Hashable  {
     var fuelConsumptionCityMax: Float
     var fuelConsumptionHighwayMin: Float
     var fuelConsumptionHighwayMax: Float
-    var fuelConsumtionCombinedMin: Float
-    var fuelConsumtionCombinedMax: Float
+    var fuelConsumptionCombinedMin: Float
+    var fuelConsumptionCombinedMax: Float
     var productionYearFrom: Int
     var productionYearTo: Int
     var enginePowerFrom: Int
