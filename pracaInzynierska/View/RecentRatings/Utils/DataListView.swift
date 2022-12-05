@@ -20,17 +20,17 @@ struct DataListView: View {
                 HStack {
                     Text("City:")
                         .bold()
-                    Text(String(rating.fuelConsumptionCity))
+                    Text(String(rating.fuelConsumptionCity) + " l/100km")
                 }
                 HStack {
                     Text("Highway:")
                         .bold()
-                    Text(String(rating.fuelConsumptionHighway))
+                    Text(String(rating.fuelConsumptionHighway) + " l/100km")
                 }
                 HStack {
                     Text("Combined:")
                         .bold()
-                    Text(String(rating.fuelConsumtionCombined))
+                    Text(String(rating.fuelConsumtionCombined) + " l/100km")
                 }
             }
             
@@ -43,7 +43,7 @@ struct DataListView: View {
                 HStack {
                     Text("Millage:")
                         .bold()
-                    Text(String(rating.millage))
+                    Text(String(rating.millage) + " km")
                 }
                 HStack {
                     Text("Transmission:")

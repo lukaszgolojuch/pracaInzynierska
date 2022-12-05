@@ -10,7 +10,7 @@ import SwiftUI
 struct AddNewRatingView: View {
     
     @ObservedObject var addNewRatingVM = AddNewRatingViewModel()
-    
+    @State var generatedRating: Rating = defaultRating
     let colors = AppColors()
 
     var body: some View {
@@ -27,14 +27,15 @@ struct AddNewRatingView: View {
                         
             VStack{
                 Form {
-                    GeneralSectionView()
-                    StarsRatingSectionView()
-                    CategorySelectionView()
-                    DescriptionSelectionView()
-                    FuelConsumptionSelectionView()
+                    GeneralSectionView(rating: $generatedRating)
+                    StarsRatingSectionView(rating: $generatedRating)
+                    CategorySelectionView(rating: $generatedRating)
+                    DescriptionSelectionView(rating: $generatedRating)
+                    FuelConsumptionSelectionView(rating: $generatedRating)
                         
                     Section {
                         Button(action: {
+                            addNewRatingVM.newRating = generatedRating
                             addNewRatingVM.saveDataToFirestore()
                         }) {
                             Text("Publish now")

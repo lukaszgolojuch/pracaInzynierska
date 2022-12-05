@@ -9,8 +9,8 @@ import SwiftUI
 
 struct GeneralSectionView: View {
     
-    @ObservedObject var addNewRatingVM = AddNewRatingViewModel()
     @State var car: String = "Car model"
+    @Binding var rating: Rating
     
     enum TransmissionType: String, CaseIterable, Identifiable {
         case Manual, Automatic
@@ -57,43 +57,38 @@ struct GeneralSectionView: View {
             }
             .onChange(of: car) { newValue in
                 print("Name changed to \(car)!")
-                addNewRatingVM.newRating.make = (CarEnum(rawValue: car)?.info.carMake)!
-                addNewRatingVM.newRating.model = (CarEnum(rawValue: car)?.info.carModel)!
+                rating.car = car
+                rating.make = (CarEnum(rawValue: car)?.info.carMake)!
+                rating.model = (CarEnum(rawValue: car)?.info.carModel)!
                 }
 
             HStack{
                 Text("Make: ")
-                TextField("Make", text: $addNewRatingVM.newRating.make)
+                TextField("Make", text: $rating.make)
             }
             
             HStack{
                 Text("Model: ")
-                TextField("Model", text: $addNewRatingVM.newRating.model)
+                TextField("Model", text: $rating.model)
             }
             
             HStack{
                 Text("Production year: ")
-                TextField("Production year", value: $addNewRatingVM.newRating.productionYear, formatter: NumberFormatter())
+                TextField("Production year", value: $rating.productionYear, formatter: NumberFormatter())
                     .keyboardType(.decimalPad)
             }
             
             HStack{
                 Text("Actual millage: ")
-                TextField("Millage", value: $addNewRatingVM.newRating.millage, formatter: NumberFormatter())
+                TextField("Millage", value: $rating.millage, formatter: NumberFormatter())
                     .keyboardType(.decimalPad)
             }
             
-            Picker(selection: $addNewRatingVM.newRating.transmission, label: Text("Transmission: ")) {
+            Picker(selection: $rating.transmission, label: Text("Transmission: ")) {
                 ForEach(TransmissionType.allCases, id: \.id) { item in
                         Text(item.rawValue)
                 }
             }
         }
-    }
-}
-
-struct GeneralSectionView_Previews: PreviewProvider {
-    static var previews: some View {
-        GeneralSectionView()
     }
 }

@@ -185,6 +185,7 @@
 				896316632933FCA500CDB672 /* AppColors.swift */,
 				898A774B2912E12A00D7A030 /* Model */,
 				898A774C2912E12F00D7A030 /* View */,
+				898A77522912E22300D7A030 /* MainView.swift */,
 				898A774D2912E13700D7A030 /* ViewModel */,
 				89AEB9AD2926C96B00E028B6 /* ImageClassfiers */,
 				898A773D2912E10500D7A030 /* pracaInzynierskaApp.swift */,
@@ -217,7 +218,6 @@
 		898A774C2912E12F00D7A030 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				898A77522912E22300D7A030 /* MainView.swift */,
 				89A4F15B2919A721009A3EA8 /* AddNewRating */,
 				898A77602912E2BD00D7A030 /* RecentRatings */,
 				898A775A2912E28D00D7A030 /* Gallery */,

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct StarsRatingSectionView: View {
     
-    @ObservedObject var addNewRatingVM = AddNewRatingViewModel()
+    @Binding var rating: Rating
 
     var label = "Rating: "
     var maximumRating = 5
@@ -28,25 +28,19 @@ struct StarsRatingSectionView: View {
             
             ForEach(1..<maximumRating + 1, id: \.self) { number in
                 image(for: number)
-                    .foregroundColor(number > addNewRatingVM.newRating.stars ? offColor : onColor)
+                    .foregroundColor(number > rating.stars ? offColor : onColor)
                     .onTapGesture {
-                        addNewRatingVM.newRating.stars = number
+                        rating.stars = number
                     }
             }
         }
     }
     
     func image(for number: Int) -> Image {
-        if number > addNewRatingVM.newRating.stars {
+        if number > rating.stars {
             return offImage ?? onImage
         } else {
             return onImage
         }
-    }
-}
-
-struct StarsRatingSectionView_Previews: PreviewProvider {
-    static var previews: some View {
-        StarsRatingSectionView()
     }
 }

@@ -14,6 +14,7 @@ struct HeaderRatingView: View {
     var body: some View {
         HStack{
             Text(rating.car)
+                .bold()
                 .font(.custom(
                     "Helvetica Neue",
                     fixedSize: 20))

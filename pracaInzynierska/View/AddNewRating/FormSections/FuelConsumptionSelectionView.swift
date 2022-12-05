@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FuelConsumptionSelectionView: View {
     
-    @ObservedObject var addNewRatingVM = AddNewRatingViewModel()
+    @Binding var rating: Rating
     
     let decimalFormatter: NumberFormatter = {
             let formatter = NumberFormatter()
@@ -25,7 +25,7 @@ struct FuelConsumptionSelectionView: View {
     var body: some View {
         Section(header: Text("Fuel Consumption").foregroundColor(.white)) {
 
-            Picker(selection: $addNewRatingVM.newRating.transmission, label: Text("Fuel type: ")) {
+            Picker(selection: $rating.fuelType, label: Text("Fuel type: ")) {
                 ForEach(FuelType.allCases, id: \.id) { item in
                         Text(item.rawValue)
                 }
@@ -33,28 +33,22 @@ struct FuelConsumptionSelectionView: View {
             
             HStack{
                 Text("Fuel Consumption (city): ")
-                TextField("City", value: $addNewRatingVM.newRating.fuelConsumptionCity, formatter: decimalFormatter)
+                TextField("City", value: $rating.fuelConsumptionCity, formatter: decimalFormatter)
                         .keyboardType(.decimalPad)
             }
             
             HStack{
                 Text("Fuel Consumption (highway): ")
-                TextField("Highway", value: $addNewRatingVM.newRating.fuelConsumptionHighway, formatter: decimalFormatter)
+                TextField("Highway", value: $rating.fuelConsumptionHighway, formatter: decimalFormatter)
                         .keyboardType(.decimalPad)
             }
             
             HStack{
                 Text("Fuel Consumption (combined): ")
-                TextField("Combined", value: $addNewRatingVM.newRating.fuelConsumtionCombined, formatter: decimalFormatter)
+                TextField("Combined", value: $rating.fuelConsumtionCombined, formatter: decimalFormatter)
                         .keyboardType(.decimalPad)
             }
             
         }
-    }
-}
-
-struct FuelConsumptionSelectionView_Previews: PreviewProvider {
-    static var previews: some View {
-        FuelConsumptionSelectionView()
     }
 }
